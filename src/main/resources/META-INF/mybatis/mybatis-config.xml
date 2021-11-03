@@ -6,6 +6,7 @@
 <configuration>
 	  <typeAliases>
 	   	<typeAlias type="jcpdev.day02.dto.BoardDto" alias="Board"/>
+	   	<typeAlias type="jcpdev.day02.dto.PageDto" alias="PageDto"/>
 	  </typeAliases>
 </configuration>
 

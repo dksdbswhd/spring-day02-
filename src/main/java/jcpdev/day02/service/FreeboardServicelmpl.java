@@ -1,8 +1,11 @@
 package jcpdev.day02.service;
 
+import org.springframework.stereotype.Component;
+
 import jcpdev.day02.dto.BoardDto;
 import jcpdev.day02.mapper.FreeboardMapper;
 
+@Component
 public class FreeboardServicelmpl implements FreeboardService {
 
 	private final FreeboardMapper freeDao;
