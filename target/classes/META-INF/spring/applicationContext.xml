@@ -39,4 +39,5 @@
    		<property name="sqlSessionTemplate" ref="sqlSessionTemplate"/>
    	</bean>
    
+   <!-- https://mybatis.org/spring/ko/mappers.html 링크참조 -->
 </beans>
