@@ -2,14 +2,14 @@
 <!DOCTYPE mapper
   PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
   "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.gb.mapper.FreeboardMapper"> <!-- namespace : java 인터페이스와 매핑될 파일 지정. -->
+<mapper namespace="jcpdev.day02.mapper.FreeboardMapper"> <!-- namespace : java 인터페이스이며 xml과 매핑될 파일 지정. -->
 	
 	<!-- sql 정의하는 태그의 id값은 매퍼 인터페이스의 메소드 이름과 동일하도록 설정합니다.  -->
 	<select id="getCount" resultType="int">
 		select count(*) from freeboard
 	</select>
 	
-	<select id="getPagelist" parameterType="com.gb.dto.PageDto" resultType="Board">
+	<select id="getPagelist" parameterType="PageDto" resultType="Board">
 		select * from freeboard order by idx desc LIMIT #{startNo},#{pageSize}
 	</select>
 	
@@ -38,7 +38,7 @@
 	</select>
 	
 	<!-- 검색 SQL : 검색 기준 컬럼은 1) 내용 2) 이름  3) 제목  4) 내용+제목   *** 동적 쿼리 ***-->
-	<select id="searchList" parameterType="com.gb.dto.PageDto" resultType="Board">
+	<select id="searchList" parameterType="PageDto" resultType="Board">
 		SELECT * FROM freeboard 
 				  <if test='"C".equals(field)'>  <!-- 파라미터 PageDto의 field 속성 -->
 				   where content like concat('%', #{findText},'%')

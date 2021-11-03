@@ -12,7 +12,7 @@
     <context:property-placeholder location="classpath:META-INF/mybatis/db.properties"/>
    
     <!-- 2. datasource : db연결정보 설정 -->
-    <bean id="datasource" class="org.springframework.jdbc.datasource.SimpleDriverDataSource">
+    <bean id="datasource" class="org.springframework.jdbc.datasource.SimpleDriverDataSource">	<!-- ← class 안에 SDDS ctrl + 스페이스바 -->
          <property name="driverClass" value="${db.driver}" />
          <property name="url" value="${db.url}" />
          <property name="username" value="${db.username}" />
