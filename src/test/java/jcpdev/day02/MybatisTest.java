@@ -31,10 +31,15 @@ class MybatisTest {
 	}
 	
 	@Test
-	void connect() {
+	void connect() {	//안윤종
 		SqlSessionTemplate sqlSeeion = (SqlSessionTemplate) context.getBean("sqlSessionTemplate");
 		assertNotNull(sqlSeeion);	//성공 또는 실패를 리턴
 		System.out.println(sqlSeeion);
+		
+		assertNotNull(fdao);
+		System.out.println(fdao);
+		assertNotNull(fservice);
+		System.out.println(fservice);
 	}
 
 }
