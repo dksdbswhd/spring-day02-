@@ -33,7 +33,7 @@ class MybatisTest {
 	@Test
 	void connect() {
 		SqlSessionTemplate sqlSeeion = (SqlSessionTemplate) context.getBean("sqlSessionTemplate");
-		assertNotNull(sqlSeeion);
+		assertNotNull(sqlSeeion);	//성공 또는 실패를 리턴
 		System.out.println(sqlSeeion);
 	}
 
